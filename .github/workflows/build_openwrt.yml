@@ -76,6 +76,7 @@ jobs:
         git clone -b $REPO_BRANCH --single-branch $REPO_URL openwrt
         cd openwrt
         git config --global user.email "cfsxv@gmail.com"
+        git config --global user.name "cfxdzc"
         git am --3way < $GITHUB_WORKSPACE/*.patch  
         echo "OPENWRT_PATH=$PWD" >> $GITHUB_ENV
         VERSION_INFO=$(git show -s --date=short --format="作者: %an<br/>时间: %cd<br/>内容: %s<br/>hash: %H")
